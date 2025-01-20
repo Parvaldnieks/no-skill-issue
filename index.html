@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>no-skill-issue</title>
-    <link rel="stylesheet" href="style.css">
+    <title>No-Skill-Issue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoom-in {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tailwind custom animations */
+        .fade-in {
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        .zoom-in {
+            animation: zoom-in 1s ease-in-out forwards;
+        }
+    </style>
 </head>
-<body>
-    <h1 class="header">No-Skill-Issue</h1>
-    <h2 class="footer">Vietne prasmīgiem programmētājiem!</h2>
-    <ul class="list">
-        <li>1. Vadīt prasme,</li>
-        <li>2. Spēja izprast kodu,</li>
-        <li>3. Tehniskās prasmes,</li>
-        <li>4. Komunikācijas prasmes,</li>
-        <li>5. Izglītība konkrētajā jomā.</li>
-    </ul> 
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-400 to-cyan-400 text-white text-center py-8 fade-in">
+        <h1 class="text-4xl font-bold fade-in">No-Skill-Issue</h1>
+        <h2 class="text-lg mt-2 fade-in">Vietne prasmīgiem programmētājiem!</h2>
+    </header>
+
+    <main class="max-w-4xl mx-auto mt-8 px-4">
+        <!-- Image Section -->
+        <section class="flex justify-center mb-8">
+            <img src="dog.jpg" alt="Cute dog" class="w-72 h-72 rounded-lg shadow-lg object-cover zoom-in">
+        </section>
+
+        <!-- Skills Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md fade-in">
+            <h3 class="text-2xl font-semibold mb-4 fade-in">Prasmes, kas nepieciešamas:</h3>
+            <ul class="list-disc list-inside text-gray-700">
+                <li class="mb-2 fade-in">Vadīt prasme</li>
+                <li class="mb-2 fade-in" style="animation-delay: 0.2s;">Spēja izprast kodu</li>
+                <li class="mb-2 fade-in" style="animation-delay: 0.4s;">Tehniskās prasmes</li>
+                <li class="mb-2 fade-in" style="animation-delay: 0.6s;">Komunikācijas prasmes</li>
+                <li class="mb-2 fade-in" style="animation-delay: 0.8s;">Izglītība konkrētajā jomā</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-400 text-white text-center py-4 mt-8 fade-in">
+        <p>&copy; 2025 No-Skill-Issue. Visi tiesības aizsargātas.</p>
+    </footer>
 </body>
 </html>
